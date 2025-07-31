@@ -2,9 +2,13 @@ const playerMove = process.argv.slice(2)[0];
 
 const moves = ['rock', 'paper', 'scissors'];
 let randomMove = Math.floor(Math.random() * moves.length)
-const computerMove = moves[randomMove]
+//Math.random() generates a random decimal number between 0 and 1
+//Math.random() * moves.length => multiplies 3 with math.random()
+//Math.floor() keeps the whole number (rounds down)
 
-let score = null
+const computerMove = moves[randomMove] // computers move, picks randomly one of the moves
+
+
 
 if (!playerMove) {
     console.log("Please provide your move! Rock, Paper or Scissors");
